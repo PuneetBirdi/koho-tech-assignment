@@ -4,7 +4,9 @@
 // node solution.js
 ```
 
-Please delete history.txt when running again.
+Please note: if you run this multiple using the same input without deleting history.txt, the function will continue to compare against the overall history, changing the results.
+
+For a fresh run every time please delete history.txt before running again.
 
 ### Application Assumptions
 
