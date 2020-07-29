@@ -23,6 +23,9 @@ Please delete history.txt when running again.
 1. The incoming load will be refered to as 'load', until the data has been converted to floats and dates. From there it will be refered to as 'transaction'.
 2. Existing historical transactions will be referred to as 'record'.
 
+### Pseudocode
+
+
 ### Submission Thoughts
 
 I wasn't able to get a correctly working script but I've identified some issues that may help me fix things:

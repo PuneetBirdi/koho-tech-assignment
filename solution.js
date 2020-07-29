@@ -3,11 +3,11 @@ const fs = require('fs');
 const readline = require('readline');
 
 //Function to convert the .txt input file into JSON objects by reading each line.
-const validate = async () => {
+const validateLoad = async (path) => {
   //Read the file one line at a time
   const rl = readline.createInterface({
     //pass in the input as a stream refering to the input text file
-    input: fs.createReadStream('./input.txt'),
+    input: fs.createReadStream(path),
   });
 
   //await each line of the stream and evaluate if it meets parameters, write response accordingly
@@ -65,9 +65,11 @@ const withinLimits = async (transaction) => {
   );
   //if daily + load attempt > 5000, reject
   //if dailyRecord.length === 3 , reject
-  if (dailyRecord.length >= 3 || dailySum + load_amount > 5000) {
-    return false;
-  } else if (weeklySum + load_amount > 20000) {
+  if (
+    dailyRecord.length >= 3 ||
+    dailySum + load_amount > 5000 ||
+    weeklySum + load_amount > 20000
+  ) {
     return false;
   } else {
     return true;
@@ -174,4 +176,4 @@ Date.prototype.getWeek = function () {
   return Math.ceil(dayOfYear / 7);
 };
 
-validate();
+validateLoad('./input.txt');
