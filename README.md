@@ -6,7 +6,7 @@
 
 Please note:
 - For a fresh run every time please delete records.txt and output.txt before running again.
-- if you run this multiple times using the same input, the function will continue to compare against the records from the previous run; changing the results and      likely rejecting more of them with each run as all customers will start to hit limits.
+- If you run this multiple times using the same input, the function will continue to compare against the records from the previous run; changing the results and      likely rejecting more of them with each run as all customers will start to hit limits.
 
 ### Application Assumptions
 
@@ -52,7 +52,7 @@ My solution isn't working completely correctly but I've identified some issues t
 
    ```
 
-Overall, I'm disappointed I couldn't get it to work correctly but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history so more loads will be rejected as customers hit limits.
+Overall, I'm disappointed I couldn't get it to work correctly but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history so more loads will be rejected as customers hit limits, making this script able to process multiple inputs.
 
 ### Process Flow Diagram
 
