@@ -4,7 +4,7 @@
 // node solution.js
 ```
 
-Please note: if you run this multiple using the same input without deleting history.txt, the function will continue to compare against the overall history, changing the results.
+Please note: if you run this multiple times using the same input, the function will continue to compare against the overall history, changing the results and likely rejecting more of them with each run as all customers will start to hit limits.
 
 For a fresh run every time please delete history.txt before running again.
 
