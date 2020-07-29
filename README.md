@@ -4,13 +4,13 @@
 // node solution.js
 ```
 
-Please note: if you run this multiple times using the same input, the function will continue to compare against the overall history, changing the results and likely rejecting more of them with each run as all customers will start to hit limits.
+Please note: if you run this multiple times using the same input, the function will continue to compare against the records from the previous run; changing the results and likely rejecting more of them with each run as all customers will start to hit limits.
 
-For a fresh run every time please delete history.txt before running again.
+For a fresh run every time please delete records.txt before running again.
 
 ### Application Assumptions
 
-1.  In order to evaluate loads, there must be a historical datastore of accepted transactions to compare against. This will be done with a writeStream to history.txt.
+1.  In order to evaluate loads, there must be a historical datastore of accepted transactions to compare against. This will be done with a writeStream to records.txt.
 
 2.  Each load is provided by line in a .txt file. In order to evaluate values it must be converted to JSON.
 

@@ -83,14 +83,14 @@ const checkHistory = async (transaction) => {
     weeklyRecord: [],
   };
 
-  if (!fs.existsSync('./history.txt')) {
+  if (!fs.existsSync('./records.txt')) {
     return customerRecords;
   }
 
   //create readline function
   const rl = readline.createInterface({
     //pass in the input as a stream refering to the histoy text file
-    input: fs.createReadStream('./history.txt'),
+    input: fs.createReadStream('./records.txt'),
   });
 
   //await each line of the stream and evaluate if it meets parameters, push to array or continue
@@ -128,7 +128,7 @@ const checkHistory = async (transaction) => {
 //UTLITY FUNCTIONS ====================
 //This function writes the accepted transaction to ./history.txt
 const writeTransaction = (transaction) => {
-  const logger = fs.createWriteStream('./history.txt', {
+  const logger = fs.createWriteStream('./records.txt', {
     flags: 'a', //This will append the file rather than re-writing the whole thing
   });
   //add '\n' to the transaction so that it's written in a new line
