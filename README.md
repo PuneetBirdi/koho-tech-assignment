@@ -48,7 +48,7 @@ I wasn't able to get a correctly working script but I've identified some issues 
    line 33: {"id":"7843","customer_id":"35","accepted":false}
 
    //Lines 31 and 32 seem to be switched in my output even though the responses are the same.
-   //Also, the the following response (line 33) is uneffected.
+   //Also, the the following response (line 33) is unaffected.
 
    ```
 
