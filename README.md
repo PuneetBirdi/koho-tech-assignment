@@ -1,7 +1,7 @@
 ### Running Script
-
+```
 // node solution.js
-
+```
 ### Application Assumptions
 
 1.  In order to evaluate loads, there must be a historical datastore of accepted transactions to compare against. This will be done with a writeStream to history.txt.
@@ -33,13 +33,15 @@ I wasn't able to get a correctly working script but I've identified some issues 
    For example:
 
    MY OUPUT:
+   ```
    line 31: {"id":"27940","customer_id":"120","accepted":false}
    line 32: {"id":"21336","customer_id":"477","accepted":true}
    line 33: {"id":"7843","customer_id":"35","accepted":false}
-
+    ```
    EXAMPLE OUTPUT
+   ```
    line 31: {"id":"21336","customer_id":"477","accepted":true}
    line 32: {"id":"27940","customer_id":"120","accepted":false}
    line 33: {"id":"7843","customer_id":"35","accepted":false}
-
+    ```
 Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates.
