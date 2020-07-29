@@ -28,7 +28,7 @@ For a fresh run every time please delete history.txt before running again.
 
 ### Submission
 
-I wasn't able to get a correctly working script but I've identified some issues that may help me fix things:
+My solution isn't working completely correctly but I've identified some issues that may help me debug:
 
 1. Line alignment was off from example output: this may be due to a duplicate entry not being ignored properly, causing file comparison to show more errors even if responses is correct
 
@@ -52,7 +52,7 @@ I wasn't able to get a correctly working script but I've identified some issues 
 
    ```
 
-Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history so more loads will be rejected as customers hit limits.
+Overall, I'm disappointed I couldn't get it to work correctly but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history so more loads will be rejected as customers hit limits.
 
 ### Process Flow Diagram
 
