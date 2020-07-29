@@ -30,9 +30,9 @@ For a fresh run every time please delete history.txt before running again.
 
 I wasn't able to get a correctly working script but I've identified some issues that may help me fix things:
 
-1. Line alignment was off from example output: this may be due to a duplicate entry not being ignored properly show to file comparison is showing more errors even if responses for each load is correct.
+1. Line alignment was off from example output: this may be due to a duplicate entry not being ignored properly, causing file comparison to show more errors even if responses is correct
 
-2. I think at some point the asynchronicity of one of the functions may have caused responses being returned in the proper order:
+2. I think at some point the asynchronicity of one of the functions may have caused responses being returned in the improper order:
 
    For example:
 
@@ -52,7 +52,7 @@ I wasn't able to get a correctly working script but I've identified some issues 
 
    ```
 
-Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history, which I'm proud of considering the possible use of this application.
+Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history so more loads will be rejected as customers hit limits.
 
 ### Process Flow Diagram
 
