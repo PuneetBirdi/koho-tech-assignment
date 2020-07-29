@@ -51,7 +51,7 @@ I wasn't able to get a correctly working script but I've identified some issues 
 Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates.
 
 ### Process Flow Diagram
-![processDiagram]('/processFlow.png ')
+![processMap](/processFlow.png)
 
 
 
