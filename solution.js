@@ -24,12 +24,12 @@ const validateLoad = async (path) => {
     //evaluate the transaction with the evaluate() function and get result
     const result = await evaluate(transaction);
 
-    //if evaluate returns true, spread the response object and set accepted:true
+    //check result and write response
     if (result) {
+      //if the load is accepted, write it to history.txt so following loads can be compared agains it
       writeTransaction(line);
       writeResponse(result, transaction);
     } else if (!result) {
-      //if evaluate() returns false, spread the response object and set accepted: false
       writeResponse(result, transaction);
     }
   }
@@ -40,7 +40,7 @@ const evaluate = async (transaction) => {
   //if the transaction is greater than 5000, reject
   if (transaction.load_amount > 5000) {
     return false;
-    //if the transaction is less than 5000, return the response from withinLimits which will futher analyze the transaction against history
+    //return the response from withinLimits which will futher analyze the transaction against history
   } else {
     return await withinLimits(transaction);
   }
@@ -63,8 +63,7 @@ const withinLimits = async (transaction) => {
     (acc, record) => acc + record.load_amount,
     0
   );
-  //if daily + load attempt > 5000, reject
-  //if dailyRecord.length === 3 , reject
+  //if load breaches limits, return false
   if (
     dailyRecord.length >= 3 ||
     dailySum + load_amount > 5000 ||
@@ -78,7 +77,7 @@ const withinLimits = async (transaction) => {
 
 //this function returns an array of all transactions completed by the requesting customer
 const checkHistory = async (transaction) => {
-  //initiate empty customerHistory array
+  //initiate empty customerHistory object with daily and weekly arrays
   const customerRecords = {
     dailyRecord: [],
     weeklyRecord: [],
@@ -106,6 +105,7 @@ const checkHistory = async (transaction) => {
     };
 
     //EVALUATE EACH RECORD
+    //// if the record is within the same day as the transaction, push to customerRecord.dailyRecord
     if (
       record.customer_id === transaction.customer_id &&
       sameDay(record.time, transaction.time)
@@ -121,6 +121,7 @@ const checkHistory = async (transaction) => {
       continue;
     }
   }
+  //when all lines are read, return customer records
   return customerRecords;
 };
 
@@ -165,7 +166,6 @@ const sameWeek = (d1, d2) => {
   return d1.getWeek() === d2.getWeek();
 };
 
-//THIS METHOD WAS PULLED
 //Create Date prototype method to return which ISO week of the year a date is in
 Date.prototype.getWeek = function () {
   //get the year of the date passed in
