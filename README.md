@@ -1,8 +1,11 @@
 ### Running Script
+
 ```
 // node solution.js
 ```
+
 Please delete history.txt when running again.
+
 ### Application Assumptions
 
 1.  In order to evaluate loads, there must be a historical datastore of accepted transactions to compare against. This will be done with a writeStream to history.txt.
@@ -14,9 +17,7 @@ Please delete history.txt when running again.
 
 3.  The history.txt datastore will be formatted exactly as input is provided, in lines. Storing as JSON would allow for easier evaluation but I'm doing this for file consistency.
 
-4.  Example output has 999 lines but input has 1000, this may be due to a duplicate being ignored?
-
-5.  No external libraries installed. Although MomentJS would've been great for evaluating time keys.
+4.  No third-party libraries.
 
 ### Naming
 
@@ -31,27 +32,26 @@ I wasn't able to get a correctly working script but I've identified some issues 
 
 2. I think at some point the asynchronicity of one of the functions may have caused responses being returned in the proper order:
 
-    For example:
-    ```
+   For example:
+
+   ```
    //EXPECTED OUTPUT
    line 31: {"id":"21336","customer_id":"477","accepted":true}
    line 32: {"id":"27940","customer_id":"120","accepted":false}
    line 33: {"id":"7843","customer_id":"35","accepted":false}
-   
+
    //MY OUPUT:
    line 31: {"id":"27940","customer_id":"120","accepted":false}
    line 32: {"id":"21336","customer_id":"477","accepted":true}
    line 33: {"id":"7843","customer_id":"35","accepted":false}
-   
-    //Lines 31 and 32 seem to be switched in my output even though the responses are the same. 
-    //Also, the the following response (line 33) is uneffected. 
 
-    ```
-    
+   //Lines 31 and 32 seem to be switched in my output even though the responses are the same.
+   //Also, the the following response (line 33) is uneffected.
+
+   ```
+
 Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates.
 
 ### Process Flow Diagram
+
 ![processMap](/processFlow.png)
-
-
-
