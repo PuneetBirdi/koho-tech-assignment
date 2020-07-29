@@ -4,9 +4,9 @@
 // node solution.js
 ```
 
-Please note: if you run this multiple times using the same input, the function will continue to compare against the records from the previous run; changing the results and likely rejecting more of them with each run as all customers will start to hit limits.
-
-For a fresh run every time please delete records.txt before running again.
+Please note:
+- For a fresh run every time please delete records.txt and output.txt before running again.
+- if you run this multiple times using the same input, the function will continue to compare against the records from the previous run; changing the results and      likely rejecting more of them with each run as all customers will start to hit limits.
 
 ### Application Assumptions
 
