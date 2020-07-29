@@ -2,6 +2,7 @@
 ```
 // node solution.js
 ```
+Please delete history.txt when running again.
 ### Application Assumptions
 
 1.  In order to evaluate loads, there must be a historical datastore of accepted transactions to compare against. This will be done with a writeStream to history.txt.
@@ -30,18 +31,21 @@ I wasn't able to get a correctly working script but I've identified some issues 
 
 2. I think at some point the asynchronicity of one of the functions may have caused responses being returned in the proper order:
 
-   For example:
-
-   MY OUPUT:
-   ```
-   line 31: {"id":"27940","customer_id":"120","accepted":false}
-   line 32: {"id":"21336","customer_id":"477","accepted":true}
-   line 33: {"id":"7843","customer_id":"35","accepted":false}
+    For example:
     ```
-   EXAMPLE OUTPUT
-   ```
+   //EXPECTED OUTPUT
    line 31: {"id":"21336","customer_id":"477","accepted":true}
    line 32: {"id":"27940","customer_id":"120","accepted":false}
    line 33: {"id":"7843","customer_id":"35","accepted":false}
+   
+   //MY OUPUT:
+   line 31: {"id":"27940","customer_id":"120","accepted":false}
+   line 32: {"id":"21336","customer_id":"477","accepted":true}
+   line 33: {"id":"7843","customer_id":"35","accepted":false}
+   
+    //Lines 31 and 32 seem to be switched in my output even though the responses are the same. 
+    //Also, the the following response (line 33) is uneffected. 
+
     ```
+    
 Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates.
