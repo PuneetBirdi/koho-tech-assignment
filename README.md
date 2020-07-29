@@ -26,7 +26,7 @@ Please note:
 1. The incoming load will be refered to as 'load', until load_amount is converted to a float and time is converted to a Date object. From there it will be refered to as 'transaction'.
 2. Existing historical transactions will be referred to as 'record'.
 
-### Submission
+### Submission + Issues
 
 My solution isn't working completely correctly but I've identified some issues that may help me debug:
 
