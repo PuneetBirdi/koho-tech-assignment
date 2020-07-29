@@ -50,7 +50,7 @@ I wasn't able to get a correctly working script but I've identified some issues 
 
    ```
 
-Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates.
+Overall, I'm disappointed I couldn't get it to work but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history, which I'm proud of considering the possible use of this application.
 
 ### Process Flow Diagram
 
