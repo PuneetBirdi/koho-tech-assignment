@@ -17,7 +17,7 @@ Please note:
     - After doing some research I chose to use a readStream and writeStream because of scalability: If the dataset gets much larger, the application would be limited by resources. If I were to load in transaction history, input and output to arrays before writing to a file I'd likely be limited by memory usage after a certain file size.
     - Streaming data may lead to slower performance but won't run into a memory limit.
 
-3.  The history.txt datastore will be formatted exactly as input is provided, in lines. Storing as JSON would allow for easier evaluation but I'm doing this for file consistency.
+3.  The records.txt datastore will be formatted exactly as input is provided, in lines. Storing as JSON would allow for easier evaluation but I'm doing this for file consistency.
 
 4.  No third-party libraries.
 
