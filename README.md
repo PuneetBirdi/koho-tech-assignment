@@ -52,7 +52,7 @@ My solution isn't working completely correctly but I've identified some issues t
 
    ```
 
-Overall, I'm disappointed I couldn't get it to work correctly but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history so more loads will be rejected as customers hit limits, making this script able to process multiple inputs.
+Overall, I'm disappointed I couldn't get it to work correctly but I learned a lot while completing this assignment about streaming and comparing dates. Using history.txt as a datastore added complexity but if you run the script multiple times with the same input it will continue to validate against history so more loads will be rejected as customers hit limits, making this script able to process multiple inputs files.
 
 ### Process Flow Diagram
 
